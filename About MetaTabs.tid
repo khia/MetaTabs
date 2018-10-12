@@ -2,7 +2,7 @@ created: 20161230221558929
 creator: JR
 modified: 20181012002551701
 modifier: JR
-story: [[About MetaTabs]] [[How to adapt Metatabs to your personal needs]] $:/MetaTabs/Template $:/MetaTabs/Language $:/MetaTabs/Button $:/MetaTabs/newIdea $:/MetaTabs/newNote $:/MetaTabs/Sliderlabel $:/core/images/notes $:/core/images/idea $:/core/images/open $:/core/images/concept
+story: [[About MetaTabs]] [[How to adapt Metatabs to your personal needs]] $:/MetaTabs/Template $:/MetaTabs/Language $:/plugins/MetaTabs/Button $:/MetaTabs/newIdea $:/MetaTabs/newNote $:/MetaTabs/Sliderlabel $:/core/images/notes $:/core/images/idea $:/core/images/open $:/core/images/concept
 tags: MetaTabs
 title: About MetaTabs
 type: text/vnd.tiddlywiki
@@ -12,7 +12,7 @@ I wanted to change the behaviour to make it show buttons only if the links exist
 The result is a lightweigt-alternative which mainly consists of 
 
 * a view-template, 
-* a button to activate it {{$:/MetaTabs/Button}}, 
+* a button to activate it {{$:/plugins/MetaTabs/Button}}, 
 * some templates to add information. (Idea, Note, )
 
 These Templates create either fields in the Tiddler (for references, footnotes...) or Tiddlers which are bound to the Tiddler they are made at by a field "origin" and tagged note, idea or task.

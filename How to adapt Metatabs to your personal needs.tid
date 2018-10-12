@@ -10,7 +10,7 @@ type: text/vnd.tiddlywiki
 !!$:/MetaTabs/Template
 The principle of this plugin is fairly simple: 
 Most of the functions rely on a viewtemplate: [[$:/MetaTabs/Template]].
-The [[Toggle-Button|$:/MetaTabs/Button]] simply removes the ~ViewTemplate-tag from this tiddler.
+The [[Toggle-Button|$:/plugins/MetaTabs/Button]] simply removes the ~ViewTemplate-tag from this tiddler.
 
 !! METATABS BUTTONS
 In the viewtemplate below the caption METATABS BUTTONS you find different buttons that set a tiddlerspecific State-Tiddler (here called stater) to determine which content shall be revealed. These buttons are in lists that make shure that they are only shown if an Items exist for a tiddler. In this plugin, a field called "source" is used to establish this relation, combined with a tag.

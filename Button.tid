@@ -4,7 +4,7 @@ creator: JR
 modified: 20181012002551728
 modifier: JR
 tags: Inventar $:/tags/PageControls MetaTabs
-title: $:/MetaTabs/Button
+title: $:/plugins/MetaTabs/Button
 type: text/vnd.tiddlywiki
 
 <$reveal state="$:/config/Visibility/MetaTabs" type="match" text="show" default="hide">
