@@ -20,7 +20,7 @@ In the bottom below the caption METATABS REVEALED CONTENT reveal-functions assig
 
 !!Templates to add new content
 Tiddlers tagged "NewMetaTab" appear as Tabs below the "add"-button.
-You can look at [[$:/MetaTabs/newIdea]] to see how this works
+You can look at [[$:/plugins/MetaTabs/newIdea]] to see how this works
 
 !!To create your own function and modify this plugin
 * You start designing your own template, and tag it "NewMetaTab"

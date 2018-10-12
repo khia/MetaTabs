@@ -4,7 +4,7 @@ creator: Alberto Molina Pérez
 modified: 20181012002551723
 modifier: JR
 tags: Inventar NewMetaTab plan MetaTabs
-title: $:/MetaTabs/newIdea
+title: $:/plugins/MetaTabs/newIdea
 type: text/vnd.tiddlywiki
 
 \define titelsetzen() [[$(titel)$]]
