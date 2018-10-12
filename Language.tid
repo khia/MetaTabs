@@ -50,6 +50,6 @@ The tags "Notiz","Idee", etc. are in German and cannot be transcluded and replac
 
 # in the Listfilter of the METATABS BUTTONS in the [[Template|$:/MetaTabs/Template]] 
 # in the Listfilters of macros at the beginning of the [[Template|$:/MetaTabs/Template]]
-# and the $:/plugins/MetaTabs/newIdea, $:/MetaTabs/newNote, etc -template.
+# and the $:/plugins/MetaTabs/newIdea, $:/plugins/MetaTabs/newNote, etc -template.
 
 The search/replace-function should help you accomplishing this...

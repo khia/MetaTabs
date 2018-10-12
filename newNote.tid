@@ -4,7 +4,7 @@ creator: JR
 modified: 20181012002551715
 modifier: JR
 tags: Inventar NewMetaTab MetaTabs
-title: $:/MetaTabs/newNote
+title: $:/plugins/MetaTabs/newNote
 type: text/vnd.tiddlywiki
 
 \define editslider(label)
