@@ -1,23 +1,23 @@
-caption: {{$:/plugins/MetaTabs/images/concept}} MetaTabs
+caption: {{$:/plugins/jr/MetaTabs/images/concept}} MetaTabs
 created: 20161129204315062
 creator: JR
 modified: 20181012002551728
 modifier: JR
 tags: Inventory $:/tags/PageControls MetaTabs
-title: $:/plugins/MetaTabs/Button
+title: $:/plugins/jr/MetaTabs/Button
 type: text/vnd.tiddlywiki
 
 <$reveal state="$:/config/Visibility/MetaTabs" type="match" text="show" default="hide">
-<$button style="border-width:0px;background: rgba(255, 255, 255, 0)" ><$fieldmangler tiddler="$:/plugins/MetaTabs/Template">
-<$action-sendmessage $message='tm-remove-tag' $param="$:/tags/ViewTemplate"/></$fieldmangler>    
-<$action-setfield $tiddler="$:/config/Visibility/MetaTabs" text="hide"/>
-{{$:/plugins/MetaTabs/images/concept}}
-</$button>
+  <$button style="border-width:0px;background: rgba(255, 255, 255, 0)" ><$fieldmangler tiddler="$:/plugins/jr/MetaTabs/Template">
+    <$action-sendmessage $message='tm-remove-tag' $param="$:/tags/ViewTemplate"/></$fieldmangler>
+    <$action-setfield $tiddler="$:/config/Visibility/MetaTabs" text="hide"/>
+    {{$:/plugins/jr/MetaTabs/images/concept}}
+  </$button>
 </$reveal>
 <$reveal state="$:/config/Visibility/MetaTabs" type="nomatch" text="show">
-<$button style="border-width:0px;background: rgba(255, 255, 255, 0)" tooltip="view links"><$fieldmangler tiddler="$:/plugins/MetaTabs/Template">
-<$action-sendmessage $message='tm-add-tag' $param="$:/tags/ViewTemplate"/></$fieldmangler>
-<$action-setfield $tiddler="$:/config/Visibility/MetaTabs" text="show"/>
-{{$:/plugins/MetaTabs/images/concept}}
-</$button>
+  <$button style="border-width:0px;background: rgba(255, 255, 255, 0)" tooltip="view links"><$fieldmangler tiddler="$:/plugins/jr/MetaTabs/Template">
+    <$action-sendmessage $message='tm-add-tag' $param="$:/tags/ViewTemplate"/></$fieldmangler>
+    <$action-setfield $tiddler="$:/config/Visibility/MetaTabs" text="show"/>
+    {{$:/plugins/jr/MetaTabs/images/concept}}
+  </$button>
 </$reveal>

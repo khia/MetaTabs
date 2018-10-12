@@ -2,9 +2,9 @@ created: 20161230221558929
 creator: JR
 modified: 20181012002551701
 modifier: JR
-story: [[$:/plugins/MetaTabs/About]] [[$:/plugins/MetaTabs/Adaptation]] $:/plugins/MetaTabs/Template $:/plugins/MetaTabs/Language $:/plugins/MetaTabs/Button $:/plugins/MetaTabs/newIdea $:/plugins/MetaTabs/newNote $:/plugins/MetaTabs/SliderLabel $:/plugins/MetaTabs/images/notes $:/plugins/MetaTabs/images/idea $:/plugins/MetaTabs/images/open $:/plugins/MetaTabs/images/concept
+story: [[$:/plugins/jr/MetaTabs/About]] [[$:/plugins/jr/MetaTabs/Adaptation]] $:/plugins/jr/MetaTabs/Template $:/plugins/jr/MetaTabs/Language $:/plugins/jr/MetaTabs/Button $:/plugins/jr/MetaTabs/newIdea $:/plugins/jr/MetaTabs/newNote $:/plugins/jr/MetaTabs/SliderLabel $:/plugins/jr/MetaTabs/images/notes $:/plugins/jr/MetaTabs/images/idea $:/plugins/jr/MetaTabs/images/open $:/plugins/jr/MetaTabs/images/concept
 tags: MetaTabs
-title: $:/plugins/MetaTabs/About
+title: $:/plugins/jr/MetaTabs/About
 type: text/vnd.tiddlywiki
 
 MetaTabs is inspired by MagicTabs and Tiddlyscholar by Alberto Molina Pérez, which is a very elaborated tool for researchers which shows a row of useful Metalinks at the bottom of each Tiddler.<br>
@@ -12,7 +12,7 @@ I wanted to change the behaviour to make it show buttons only if the links exist
 The result is a lightweigt-alternative which mainly consists of 
 
 * a view-template, 
-* a button to activate it {{$:/plugins/MetaTabs/Button}}, 
+* a button to activate it {{$:/plugins/jr/MetaTabs/Button}}, 
 * some templates to add information. (Idea, Note, )
 
 These Templates create either fields in the Tiddler (for references, footnotes...) or Tiddlers which are bound to the Tiddler they are made at by a field "origin" and tagged note, idea or task.
@@ -31,15 +31,15 @@ Because I was not able to pack this as a plugin yet; I packed all related tiddle
 https://www.dropbox.com/s/7xh81nxrpunfzpn/MetaTabs.json?dl=1 
 
 !Implementations 
-You can Modify ~MetaTabs yourself. For this I made an [[explanation|$:/plugins/MetaTabs/Adaptation]] which helps you to start building your own version with your personal categories. Because it consists of only a few Tiddlers, it is possible to adapt Metatabs to personal needs.<br>
+You can Modify ~MetaTabs yourself. For this I made an [[explanation|$:/plugins/jr/MetaTabs/Adaptation]] which helps you to start building your own version with your personal categories. Because it consists of only a few Tiddlers, it is possible to adapt Metatabs to personal needs.<br>
 Birthe has made a Danish version of ~MetaTabs @ http://faneklip.tiddlyspot.com mixing it with tiddlyclip. Thanks for the enhancements I reimported!
 
 !Updating from old Versions
 Old versions of ~MetaTabs used a field named "source" to create the relations, instead of "origin" like the new versions do. [[Here|Fieldchanger]] is a tool to fix this if you upgrade. 
 
 !Translations
-To have ~MetaTabs in your language change the fields in the [[TranslationTiddler|$:/plugins/MetaTabs/Language]].<br>
+To have ~MetaTabs in your language change the fields in the [[TranslationTiddler|$:/plugins/jr/MetaTabs/Language]].<br>
 There are a few ready-to-install translations of MetaTabs:
-<$list filter="[prefix[$:/plugins/MetaTabs/Language]]-[[$:/plugins/MetaTabs/Language]]"><br>{{!!title}} created by {{!!modifier}}</$list><br>
-Just drag the translation you want to your TW and rename it $:/plugins/MetaTabs/Language .<br>
-If you translate $:/plugins/MetaTabs/Language please send it to me, I will import it into this wiki and list it.
+<$list filter="[prefix[$:/plugins/jr/MetaTabs/Language]]-[[$:/plugins/jr/MetaTabs/Language]]"><br>{{!!title}} created by {{!!modifier}}</$list><br>
+Just drag the translation you want to your TW and rename it $:/plugins/jr/MetaTabs/Language .<br>
+If you translate $:/plugins/jr/MetaTabs/Language please send it to me, I will import it into this wiki and list it.

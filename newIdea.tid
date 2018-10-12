@@ -1,41 +1,62 @@
-caption: {{$:/plugins/MetaTabs/images/idea}}{{$:/plugins/MetaTabs/Language!!idea}}
+caption: {{$:/plugins/jr/MetaTabs/images/idea}}{{$:/plugins/jr/MetaTabs/Language!!idea}}
 created: 20160817093209918
 creator: Alberto Molina Pérez
 modified: 20181012002551723
 modifier: JR
 tags: Inventory NewMetaTab plan MetaTabs
-title: $:/plugins/MetaTabs/newIdea
+title: $:/plugins/jr/MetaTabs/newIdea
 type: text/vnd.tiddlywiki
 
 \define settitle() [[$(title)$]]
 \define setdate() Idea $(temptags)$
 \define newtit() Idea-$(preptit)$-<<now DD.MMMYY>>
 <style>
-.addnewform textarea,
-.addnewform input{
-width:100%;
-display:inline-block;
-text-align:left;
-}
+  .addnewform textarea,
+  .addnewform input{
+  width:100%;
+  display:inline-block;
+  text-align:left;
+  }
 </style>
 <div class="addnewform">
-<$edit-text tiddler="$:/temp/idea" field="provisory_title" placeholder={{$:/plugins/MetaTabs/Language!!newtitle}} tag="input" class="tw-edit-texteditor"/><br>
-<$set name="preptit" setTo={{$:/temp/idea!!provisory_title}}>
-<$list filter="[field:title{$:/temp/idea!!provisory_title}]">
-@@color:red;{{$:/plugins/MetaTabs/Language!!exists}}@@
-@@color:blue;<$link><$view field="title"/></$link>@@ 
-</$list>
-</$set>
-<$tiddler tiddler="$:/temp/idea">{{||$:/core/ui/EditTemplate/tags}}</$tiddler>
-<$edit-text tiddler="$:/temp/idea" default="" placeholder={{$:/plugins/MetaTabs/Language!!ideatext}} class="tw-edit-texteditor" tag="textarea"/><br>
+  <$edit-text
+    tiddler="$:/temp/idea"
+    field="provisory_title"
+    placeholder={{$:/plugins/jr/MetaTabs/Language!!newtitle}}
+    tag="input" class="tw-edit-texteditor"/>
+  <br>
+  <$set name="preptit" setTo={{$:/temp/idea!!provisory_title}}>
+    <$list filter="[field:title{$:/temp/idea!!provisory_title}]">
+      @@color:red;{{$:/plugins/jr/MetaTabs/Language!!exists}}@@
+      @@color:blue;<$link><$view field="title"/></$link>@@
+    </$list>
+  </$set>
+  <$tiddler tiddler="$:/temp/idea">{{||$:/core/ui/EditTemplate/tags}}</$tiddler>
+  <$edit-text
+    tiddler="$:/temp/idea"
+    default=""
+    placeholder={{$:/plugins/jr/MetaTabs/Language!!ideatext}}
+    class="tw-edit-texteditor"
+    tag="textarea"/>
+  <br>
 </div>
-<$set name="temptags" value={{$:/temp/idea!!tags}}> 
-<$set name="title" value={{!!title}}>
+<$set name="temptags" value={{$:/temp/idea!!tags}}>
+  <$set name="title" value={{!!title}}>
+    <$button>
+      <$action-sendmessage
+        $message="tm-new-tiddler"
+        title={{$:/temp/idea!!provisory_title}}
+        tags=<<setdate>>
+        thema={{!!thema}}
+        seminar={{!!seminar}}
+        text={{$:/temp/idea!!text}}
+        origin=<<settitle>>/>
+      <$action-deletetiddler $filter="[search:title[ $:/temp/idea]]"/>
+      {{$:/core/images/new-button}}{{$:/plugins/jr/MetaTabs/Language!!saveidea}}
+    </$button>
+  </$set>
+</$set>
 <$button>
-<$action-sendmessage $message="tm-new-tiddler" title={{$:/temp/idea!!provisory_title}} tags=<<setdate>> thema={{!!thema}} seminar={{!!seminar}} text={{$:/temp/idea!!text}} origin=<<settitle>>/>
-<$action-deletetiddler $filter="[search:title[ $:/temp/idea]]"/>
-{{$:/core/images/new-button}}{{$:/plugins/MetaTabs/Language!!saveidea}}
-</$button></$set></$set><$button>
-<$action-deletetiddler $filter="[search:title[$:/temp/idea]]"/>
-{{$:/plugins/MetaTabs/Language!!clear}}
+  <$action-deletetiddler $filter="[search:title[$:/temp/idea]]"/>
+  {{$:/plugins/jr/MetaTabs/Language!!clear}}
 </$button>

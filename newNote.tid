@@ -1,73 +1,94 @@
-caption: {{$:/plugins/MetaTabs/images/notes}}{{$:/plugins/MetaTabs/Language!!note}}
+caption: {{$:/plugins/jr/MetaTabs/images/notes}}{{$:/plugins/jr/MetaTabs/Language!!note}}
 created: 20160713082608994
 creator: JR
 modified: 20181012002551715
 modifier: JR
 tags: Inventory NewMetaTab MetaTabs
-title: $:/plugins/MetaTabs/newNote
+title: $:/plugins/jr/MetaTabs/newNote
 type: text/vnd.tiddlywiki
 
 \define editslider(label)
-<$reveal type="match" text="" default="" state="$:/state/$label$" animate="yes"><$radio  tiddler="$:/state/$label$" value="show">{{$label$||$:/plugins/MetaTabs/SliderLabel}}</$radio><hr>
-</$reveal>
-<$reveal type="nomatch" text="" default="" state="$:/state/$label$" animate="yes"><$radio  tiddler="$:/state/$label$" value="" style="font-size:1.2em;background-color:transparent">{{$label$||$:/plugins/MetaTabs/SliderLabel}}</$radio><$link>@@height:1em;{{$:/plugins/MetaTabs/images/open}}@@</$link>
-<br>
-<$edit-text placeholder="Text der Note" class="tw-edit-texteditor" tag="textarea"/>
-</$reveal>
+  <$reveal type="match" text="" default="" state="$:/state/$label$" animate="yes">
+    <$radio tiddler="$:/state/$label$" value="show">
+      {{$label$||$:/plugins/jr/MetaTabs/SliderLabel}}
+    </$radio>
+    <hr>
+  </$reveal>
+  <$reveal type="nomatch" text="" default="" state="$:/state/$label$" animate="yes">
+    <$radio tiddler="$:/state/$label$" value="" style="font-size:1.2em;background-color:transparent">
+      {{$label$||$:/plugins/jr/MetaTabs/SliderLabel}}
+    </$radio>
+    <$link>
+      @@height:1em;{{$:/plugins/jr/MetaTabs/images/open}}@@
+    </$link>
+    <br>
+    <$edit-text placeholder="Text der Note" class="tw-edit-texteditor" tag="textarea"/>
+  </$reveal>
 \end
 \define settitle() [[$(title)$]]
 \define setdate() Note $(temptags)$
 \define timeStampTitle() $(inputTitle)$ $(timeStamp)$-$(title)$
 \define appearedit()
-<$appear show={{$:/core/images/edit-button}}><$edit-text placeholder="Text der Note" class="tw-edit-texteditor" tag="textarea"/></$appear>
+  <$appear show={{$:/core/images/edit-button}}>
+    <$edit-text placeholder="Text der Note" class="tw-edit-texteditor" tag="textarea"/>
+  </$appear>
 \end
 \define newnote()
-<$vars timeStamp=<<now DD.MMMYY>> inputTitle={{$:/temp/note!!inputTitle}} temptags={{$:/temp/note!!tags}} title={{!!title}}>
-<$button>
-<$action-sendmessage
-  $message="tm-new-tiddler"
-  text={{$:/temp/note!!text}}
-  thema={{!!thema}} seminar={{!!seminar}}  
-  title=<<timeStampTitle>>
-  origin=<<settitle>>
-  tags=<<setdate>>/>
-<$action-deletetiddler $filter="[search:title[ $:/temp/note]]"/>{{$:/plugins/MetaTabs/Language!!addnote}}</$button>
-</$vars>
+  <$vars timeStamp=<<now DD.MMMYY>> inputTitle={{$:/temp/note!!inputTitle}} temptags={{$:/temp/note!!tags}} title={{!!title}}>
+    <$button>
+      <$action-sendmessage
+        $message="tm-new-tiddler"
+        text={{$:/temp/note!!text}}
+        thema={{!!thema}} seminar={{!!seminar}}
+        title=<<timeStampTitle>>
+        origin=<<settitle>>
+        tags=<<setdate>>/>
+      <$action-deletetiddler $filter="[search:title[ $:/temp/note]]"/>
+      {{$:/plugins/jr/MetaTabs/Language!!addnote}}
+    </$button>
+  </$vars>
 \end
 <style>
-.addnewform textarea,
-.addnewform input{
-width:100%;
-display:inline-block;
-text-align:left;
-}
-.oldnotes textarea{
-width:100%;
-display:inline-block;
-text-align:left;
-}
-.oldnotes input{
-width:2em;
-display:inline-block;
-text-align:center;
-border-width:0px
-}
-.oldnotes svg {
-height: 1.2em
-}
+  .addnewform textarea,
+  .addnewform input{
+    width:100%;
+    display:inline-block;
+    text-align:left;
+  }
+  .oldnotes textarea{
+    width:100%;
+    display:inline-block;
+    text-align:left;
+  }
+  .oldnotes input{
+    width:2em;
+    display:inline-block;
+    text-align:center;
+    border-width:0px
+  }
+  .oldnotes svg {
+    height: 1.2em
+  }
 </style>
 <br>
 <div class="oldnotes">
-<$list filter="[search:origin<currentTiddler>tag[Note]sort[position]]"><$fieldmangler><$edit-text class="small-editor" tag="input" field="position"/><$macrocall $name="editslider" label={{!!title}}/></$fieldmangler></$list>
+  <$list filter="[search:origin<currentTiddler>tag[Note]sort[position]]">
+    <$fieldmangler>
+      <$edit-text class="small-editor" tag="input" field="position"/>
+      <$macrocall $name="editslider" label={{!!title}}/>
+    </$fieldmangler>
+  </$list>
 </div>
 
-!!! {{$:/core/images/edit-button}} {{$:/plugins/MetaTabs/Language!!addnote}}
+!!! {{$:/core/images/edit-button}} {{$:/plugins/jr/MetaTabs/Language!!addnote}}
 <div class="addnewform">
-<$edit-text tiddler="$:/temp/note" field="inputTitle" tag="input" placeholder={{$:/plugins/MetaTabs/Language!!notetitle}}/>
-<$edit-text tiddler="$:/temp/note" default="" placeholder={{$:/plugins/MetaTabs/Language!!note}} class="tw-edit-texteditor" tag="textarea"/><br><$tiddler tiddler="$:/temp/note">{{||$:/core/ui/EditTemplate/tags}}</$tiddler>
+  <$edit-text tiddler="$:/temp/note" field="inputTitle" tag="input" placeholder={{$:/plugins/jr/MetaTabs/Language!!notetitle}}/>
+  <$edit-text tiddler="$:/temp/note" default="" placeholder={{$:/plugins/jr/MetaTabs/Language!!note}} class="tw-edit-texteditor" tag="textarea"/>
+  <br>
+  <$tiddler tiddler="$:/temp/note">{{||$:/core/ui/EditTemplate/tags}}</$tiddler>
 </div>
 <<newnote>>
 <$button>
-<$action-deletetiddler $filter="[search:title[$:/temp/note]]"/>
-{{$:/plugins/MetaTabs/Language!!clear}}
+  <$action-deletetiddler $filter="[search:title[$:/temp/note]]"/>
+  {{$:/plugins/jr/MetaTabs/Language!!clear}}
 </$button>

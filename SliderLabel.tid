@@ -3,7 +3,7 @@ creator: JR
 modified: 20181012002551710
 modifier: JR
 tags: template Test Inventory MetaTabs
-title: $:/plugins/MetaTabs/SliderLabel
+title: $:/plugins/jr/MetaTabs/SliderLabel
 type: text/vnd.tiddlywiki
 
 <$view field="title"/>

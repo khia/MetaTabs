@@ -3,67 +3,136 @@ creator: JR
 modified: 20181012002551739
 modifier: JR
 tags: Inventory $:/tags/ViewTemplate MetaTabs
-title: $:/plugins/MetaTabs/Template
+title: $:/plugins/jr/MetaTabs/Template
 type: text/vnd.tiddlywiki
 
 \define slider(label)
-<hr><$button popup="$:/state/$label$" style="font-size:1.2em;float:left;background-color:transparent"><$reveal type="match" text="" default="" state="$:/state/$label$">&#x229E;</$reveal><$reveal type="nomatch" text="" default="" state="$:/state/$label$">&#x229F;</$reveal> {{$label$||$:/plugins/MetaTabs/SliderLabel}}</$button>
-<$reveal type="nomatch" text="" default="" state="$:/state/$label$" animate="yes"> <$link>@@height:1em;{{$:/plugins/MetaTabs/images/open}}@@</$link>
-<br>
-<$transclude mode="block"/>
-</$reveal><br>
+  <hr>
+  <$button popup="$:/state/$label$" style="font-size:1.2em;float:left;background-color:transparent">
+    <$reveal type="match" text="" default="" state="$:/state/$label$">&#x229E;</$reveal>
+    <$reveal type="nomatch" text="" default="" state="$:/state/$label$">&#x229F;</$reveal>
+    {{$label$||$:/plugins/jr/MetaTabs/SliderLabel}}
+  </$button>
+  <$reveal type="nomatch" text="" default="" state="$:/state/$label$" animate="yes">
+    <$link>
+      @@height:1em;{{$:/plugins/jr/MetaTabs/images/open}}@@
+    </$link>
+    <br>
+    <$transclude mode="block"/>
+  </$reveal>
+  <br>
 \end
 \define staterfil() [title[$:/temp/stater/$(tabstatid)$]has[created]]
 \define stater() $:/temp/stater/$(tabstatid)$
 \define sort()
-<hr>
-<<taglistsubstract>>
-<<tagdropper>>
-<$list filter="[list[!!import]limit[1]]-[list[!!list]]">original imported title<br/></$list>
-<$list filter="[list[!!import]]-[list[!!list]]"><$link><$view field="title"/></$link><br/></$list>
+  <hr>
+  <<taglistsubstract>>
+  <<tagdropper>>
+  <$list filter="[list[!!import]limit[1]]-[list[!!list]]">
+    original imported title
+    <br/>
+  </$list>
+  <$list filter="[list[!!import]]-[list[!!list]]">
+    <$link>
+      <$view field="title"/>
+    </$link>
+    <br/>
+  </$list>
 \end
 \define showitems()
-<hr><$link>{{!!title}}</$link><$appear><br><$transclude field="text" mode="block"/></$appear><br>
+  <hr>
+  <$link>{{!!title}}</$link>
+  <$appear>
+    <br>
+    <$transclude field="text" mode="block"/>
+  </$appear>
+  <br>
 \end
 \define idea()
-<$list filter="[search:origin<currentTiddler>tag[Idea]]"><$macrocall $name="slider" label={{!!title}}/></$list>
+  <$list filter="[search:origin<currentTiddler>tag[Idea]]">
+    <$macrocall $name="slider" label={{!!title}}/>
+  </$list>
 \end
 \define notes()
-<$list filter="[search:origin<currentTiddler>tag[Note]sort[position]]"><$macrocall $name="slider" label={{!!title}}/></$list>
+  <$list filter="[search:origin<currentTiddler>tag[Note]sort[position]]">
+    <$macrocall $name="slider" label={{!!title}}/>
+  </$list>
 \end
 \define additem()
-<<tabs "[tag[NewMetaTab]]" "$:/temp/stater/makenewitem">>
+  <<tabs "[tag[NewMetaTab]]" "$:/temp/stater/makenewitem">>
 \end
 \define showtasks()
-<$list filter="[search:origin<currentTiddler>tag[task]]"><hr><<tasktermin>><br>{{!!text}}<br></$list>
+  <$list filter="[search:origin<currentTiddler>tag[task]]">
+    <hr>
+    <<tasktermin>>
+    <br>{{!!text}}<br>
+  </$list>
 \end
 \define annotations()
-<footer class="footnotes">
-<<extract tiddler:{{!!title}} start:"<ref " end:">" limit:"no" rmQuotes:"y">>
-</footer>
+  <footer class="footnotes">
+    <<extract tiddler:{{!!title}} start:"<ref " end:">" limit:"no" rmQuotes:"y">>
+  </footer>
 \end
 <style>
-.metainfo button {
-display:inline-block;
-border-width:0px;
-float: right;
-}
-#metainfo {
-position: relative; padding-bottom:-20px
-}
-@media print {.metainfo button{display: none ! important;}}
+  .metainfo button {
+    display:inline-block;
+    border-width:0px;
+    float: right;
+  }
+  #metainfo {
+    position: relative; padding-bottom:-20px
+  }
+  @media print {.metainfo button{display: none ! important;}}
 </style>
 <div class="metainfo">
 <$set name=tabstatid value=<<currentTiddler>>>
-<$list filter="[search:origin<currentTiddler>tag[Note]limit[1]]"><$button><$action-setfield $tiddler=<<stater>> text="note"/> {{$:/plugins/MetaTabs/images/notes}}</$button></$list>
-<$list filter="[search:origin<currentTiddler>tag[Idea]limit[1]]"><$button><$action-setfield $tiddler=<<stater>> text="idea"/> {{$:/plugins/MetaTabs/images/idea}}</$button></$list>
-<$list filter="[all[current]search[<ref ]]"><$button><$action-setfield $tiddler=<<stater>> text="references"/> {{$:/core/images/asterisk}}</$button></$list>
-<$list filter="[all[current]has[slideshow]][all[current]has[story]]"><$button><$action-setfield $tiddler=<<stater>> text="story"/> {{$:/core/images/slideshow}}</$button></$list>
-<$list filter="[all[current]tag[sort]]"><$button><$action-setfield $tiddler=<<stater>> text="sort"/> {{$:/core/images/list-bullet}}</$button></$list>
-<$list filter="[search:origin<currentTiddler>tag[task]limit[1]]"><$button><$action-setfield $tiddler=<<stater>> text="task"/>@@font-size:15px;font-style: italic;font-weight: bold;!@@</$button></$list>
+<$list filter="[search:origin<currentTiddler>tag[Note]limit[1]]">
+  <$button>
+    <$action-setfield $tiddler=<<stater>> text="note"/>
+    {{$:/plugins/jr/MetaTabs/images/notes}}
+  </$button>
+</$list>
+<$list filter="[search:origin<currentTiddler>tag[Idea]limit[1]]">
+  <$button>
+    <$action-setfield $tiddler=<<stater>> text="idea"/>
+    {{$:/plugins/jr/MetaTabs/images/idea}}
+  </$button>
+</$list>
+<$list filter="[all[current]search[<ref ]]">
+  <$button>
+    <$action-setfield $tiddler=<<stater>> text="references"/>
+    {{$:/core/images/asterisk}}
+  </$button>
+</$list>
+<$list filter="[all[current]has[slideshow]][all[current]has[story]]">
+  <$button>
+    <$action-setfield $tiddler=<<stater>> text="story"/>
+    {{$:/core/images/slideshow}}
+  </$button>
+</$list>
+<$list filter="[all[current]tag[sort]]">
+  <$button>
+    <$action-setfield $tiddler=<<stater>> text="sort"/>
+    {{$:/core/images/list-bullet}}
+  </$button>
+</$list>
+<$list filter="[search:origin<currentTiddler>tag[task]limit[1]]">
+  <$button>
+    <$action-setfield $tiddler=<<stater>> text="task"/>
+    @@font-size:15px;font-style: italic;font-weight: bold;!@@
+  </$button>
+</$list>
 <$list filter="[all[current]!tag[Inventory]!is[system]]">
-<$button><$action-setfield $tiddler=<<stater>> text="add"/> {{$:/core/images/new-button}}</$button></$list>
-<$list filter=<<staterfil>>><$button class="invisible"><$action-deletetiddler $filter=<<staterfil>>/> {{$:/core/images/close-button}}</$button>
+  <$button>
+    <$action-setfield $tiddler=<<stater>> text="add"/>
+    {{$:/core/images/new-button}}
+  </$button>
+</$list>
+<$list filter=<<staterfil>>>
+  <$button class="invisible">
+    <$action-deletetiddler $filter=<<staterfil>>/>
+    {{$:/core/images/close-button}}
+  </$button>
 </$list>
 <br>
 <$reveal state=<<stater>> type="match" text="story" default="hide">
