@@ -8,14 +8,14 @@ title: $:/plugins/MetaTabs/Button
 type: text/vnd.tiddlywiki
 
 <$reveal state="$:/config/Visibility/MetaTabs" type="match" text="show" default="hide">
-<$button style="border-width:0px;background: rgba(255, 255, 255, 0)" ><$fieldmangler tiddler="$:/MetaTabs/Template">
+<$button style="border-width:0px;background: rgba(255, 255, 255, 0)" ><$fieldmangler tiddler="$:/plugins/MetaTabs/Template">
 <$action-sendmessage $message='tm-remove-tag' $param="$:/tags/ViewTemplate"/></$fieldmangler>    
 <$action-setfield $tiddler="$:/config/Visibility/MetaTabs" text="hide"/>
 {{$:/core/images/concept}}
 </$button>
 </$reveal>
 <$reveal state="$:/config/Visibility/MetaTabs" type="nomatch" text="show">
-<$button style="border-width:0px;background: rgba(255, 255, 255, 0)" tooltip="Verknüpfungen anzeigen"><$fieldmangler tiddler="$:/MetaTabs/Template">
+<$button style="border-width:0px;background: rgba(255, 255, 255, 0)" tooltip="Verknüpfungen anzeigen"><$fieldmangler tiddler="$:/plugins/MetaTabs/Template">
 <$action-sendmessage $message='tm-add-tag' $param="$:/tags/ViewTemplate"/></$fieldmangler>
 <$action-setfield $tiddler="$:/config/Visibility/MetaTabs" text="show"/>
 {{$:/core/images/concept}}

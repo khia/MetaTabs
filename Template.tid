@@ -3,7 +3,7 @@ creator: JR
 modified: 20181012002551739
 modifier: JR
 tags: Inventar $:/tags/ViewTemplate MetaTabs
-title: $:/MetaTabs/Template
+title: $:/plugins/MetaTabs/Template
 type: text/vnd.tiddlywiki
 
 \define slider(label)

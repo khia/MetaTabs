@@ -48,8 +48,8 @@ For doing further changes the explanation "[[How to adapt Metatabs to your perso
 !Tags
 The tags "Notiz","Idee", etc. are in German and cannot be transcluded and replaced from this ~TranslationTiddler because they are used in Listfilters. If you want to change these tags, you have to change the each one manually in three places:
 
-# in the Listfilter of the METATABS BUTTONS in the [[Template|$:/MetaTabs/Template]] 
-# in the Listfilters of macros at the beginning of the [[Template|$:/MetaTabs/Template]]
+# in the Listfilter of the METATABS BUTTONS in the [[Template|$:/plugins/MetaTabs/Template]] 
+# in the Listfilters of macros at the beginning of the [[Template|$:/plugins/MetaTabs/Template]]
 # and the $:/plugins/MetaTabs/newIdea, $:/plugins/MetaTabs/newNote, etc -template.
 
 The search/replace-function should help you accomplishing this...
