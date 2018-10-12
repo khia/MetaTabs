@@ -35,7 +35,7 @@ source: About Metatabs
 tags: Inventory MetaTabs
 tasks: Tasks
 tasktext: Information on the task
-titel: Title
+title: Title
 title: $:/plugins/MetaTabs/Language
 type: text/vnd.tiddlywiki
 year: Year

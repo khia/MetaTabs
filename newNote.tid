@@ -15,14 +15,14 @@ type: text/vnd.tiddlywiki
 <$edit-text placeholder="Text der Note" class="tw-edit-texteditor" tag="textarea"/>
 </$reveal>
 \end
-\define settitle() [[$(titel)$]]
+\define settitle() [[$(title)$]]
 \define setdate() Note $(temptags)$
-\define timeStampTitle() $(inputTitle)$ $(timeStamp)$-$(titel)$
+\define timeStampTitle() $(inputTitle)$ $(timeStamp)$-$(title)$
 \define appearedit()
 <$appear show={{$:/core/images/edit-button}}><$edit-text placeholder="Text der Note" class="tw-edit-texteditor" tag="textarea"/></$appear>
 \end
 \define newnote()
-<$vars timeStamp=<<now DD.MMMYY>> inputTitle={{$:/temp/note!!inputTitle}} temptags={{$:/temp/note!!tags}} titel={{!!title}}>
+<$vars timeStamp=<<now DD.MMMYY>> inputTitle={{$:/temp/note!!inputTitle}} temptags={{$:/temp/note!!tags}} title={{!!title}}>
 <$button>
 <$action-sendmessage
   $message="tm-new-tiddler"

@@ -7,7 +7,7 @@ tags: Inventory NewMetaTab plan MetaTabs
 title: $:/plugins/MetaTabs/newIdea
 type: text/vnd.tiddlywiki
 
-\define settitle() [[$(titel)$]]
+\define settitle() [[$(title)$]]
 \define setdate() Idea $(temptags)$
 \define newtit() Idea-$(preptit)$-<<now DD.MMMYY>>
 <style>
@@ -30,7 +30,7 @@ text-align:left;
 <$edit-text tiddler="$:/temp/idea" default="" placeholder={{$:/plugins/MetaTabs/Language!!ideatext}} class="tw-edit-texteditor" tag="textarea"/><br>
 </div>
 <$set name="temptags" value={{$:/temp/idea!!tags}}> 
-<$set name="titel" value={{!!title}}>
+<$set name="title" value={{!!title}}>
 <$button>
 <$action-sendmessage $message="tm-new-tiddler" title={{$:/temp/idea!!provisory_title}} tags=<<setdate>> thema={{!!thema}} seminar={{!!seminar}} text={{$:/temp/idea!!text}} origin=<<settitle>>/>
 <$action-deletetiddler $filter="[search:title[ $:/temp/idea]]"/>
