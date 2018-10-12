@@ -1,0 +1,9 @@
+ {
+	"title": "$:/plugins/jr/MetaTabs",
+	"description": "Attach and show information in tabs at the bottom of a Tiddler",
+	"author": "jr",
+	"version": "0.0.1",
+	"core-version": ">=5.1.17",
+	"source": "https://github.com/khia/MetaTabs",
+	"plugin-type": "plugin"
+}
