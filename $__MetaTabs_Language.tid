@@ -1,0 +1,55 @@
+addnote: add note
+addtags: additional tags
+author: author
+clear: clear Fields
+comment: Comment
+created: 20160818195910298
+createitem: create Tiddler
+creator: JR
+date: Date
+editreferences: Edit References
+exists: This Tiddler exists and would be overwritten.<br>view it first:
+hide: Hide Metatabs
+hidesort: hide Menu to sort
+idea: Idea
+ideatext: Text of the idea
+indexinfo: This Tiddler will appear in the Index of:
+itemtext: Text of the Tiddler
+loadshow: load this presentation
+loadstory: load this story
+modified: 20181012002551733
+modifier: JR
+newtext: Text
+newtitle: Title
+note: Note
+notetext: Text of the note
+notetitle: Add component of the Title 
+page: Page
+place: Publisher, Publishing Place
+publication: publication
+reference: Reference
+saveidea: save this idea
+show: Show Metatabs
+showsort: show Menu to sort
+source: About Metatabs
+tags: Inventar MetaTabs
+tasks: Tasks
+tasktext: Information on the task
+titel: Title
+title: $:/MetaTabs/Language
+type: text/vnd.tiddlywiki
+year: Year
+
+The fields of this tiddler configure captions and buttons of the Metatabs-Plugin. 
+You can change them to your desired language.
+Because I started this for my private purposes there is quite a lot to change and it will take me some time to track down all german phrases...
+For doing further changes the explanation "[[How to adapt Metatabs to your personal needs]]" may be helpfull.
+
+!Tags
+The tags "Notiz","Idee", etc. are in German and cannot be transcluded and replaced from this ~TranslationTiddler because they are used in Listfilters. If you want to change these tags, you have to change the each one manually in three places:
+
+# in the Listfilter of the METATABS BUTTONS in the [[Template|$:/MetaTabs/Template]] 
+# in the Listfilters of macros at the beginning of the [[Template|$:/MetaTabs/Template]]
+# and the $:/MetaTabs/newIdea, $:/MetaTabs/newNote, etc -template.
+
+The search/replace-function should help you accomplishing this...

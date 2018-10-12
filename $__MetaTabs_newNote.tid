@@ -1,0 +1,73 @@
+caption: {{$:/core/images/notes}}{{$:/MetaTabs/Language!!note}}
+created: 20160713082608994
+creator: JR
+modified: 20181012002551715
+modifier: JR
+tags: Inventar NewMetaTab MetaTabs
+title: $:/MetaTabs/newNote
+type: text/vnd.tiddlywiki
+
+\define editslider(label)
+<$reveal type="match" text="" default="" state="$:/state/$label$" animate="yes"><$radio  tiddler="$:/state/$label$" value="show">{{$label$||$:/MetaTabs/Sliderlabel}}</$radio><hr>
+</$reveal>
+<$reveal type="nomatch" text="" default="" state="$:/state/$label$" animate="yes"><$radio  tiddler="$:/state/$label$" value="" style="font-size:1.2em;background-color:transparent">{{$label$||$:/MetaTabs/Sliderlabel}}</$radio><$link>@@height:1em;{{$:/core/images/open}}@@</$link>
+<br>
+<$edit-text placeholder="Text der Notiz" class="tw-edit-texteditor" tag="textarea"/>
+</$reveal>
+\end
+\define titelsetzen() [[$(titel)$]]
+\define tagssetzen() Notiz $(temptags)$
+\define timeStampTitle() $(inputTitle)$ $(timeStamp)$-$(titel)$
+\define appearedit()
+<$appear show={{$:/core/images/edit-button}}><$edit-text placeholder="Text der Notiz" class="tw-edit-texteditor" tag="textarea"/></$appear>
+\end
+\define neuenotiz()
+<$vars timeStamp=<<now DD.MMMYY>> inputTitle={{$:/temp/note!!inputTitle}} temptags={{$:/temp/note!!tags}} titel={{!!title}}>
+<$button>
+<$action-sendmessage
+  $message="tm-new-tiddler"
+  text={{$:/temp/note!!text}}
+  thema={{!!thema}} seminar={{!!seminar}}  
+  title=<<timeStampTitle>>
+  origin=<<titelsetzen>>
+  tags=<<tagssetzen>>/>
+<$action-deletetiddler $filter="[search:title[ $:/temp/note]]"/>{{$:/MetaTabs/Language!!addnote}}</$button>
+</$vars>
+\end
+<style>
+.addnewform textarea,
+.addnewform input{
+width:100%;
+display:inline-block;
+text-align:left;
+}
+.oldnotes textarea{
+width:100%;
+display:inline-block;
+text-align:left;
+}
+.oldnotes input{
+width:2em;
+display:inline-block;
+text-align:center;
+border-width:0px
+}
+.oldnotes svg {
+height: 1.2em
+}
+</style>
+<br>
+<div class="oldnotes">
+<$list filter="[search:origin<currentTiddler>tag[Notiz]sort[position]]"><$fieldmangler><$edit-text class="small-editor" tag="input" field="position"/><$macrocall $name="editslider" label={{!!title}}/></$fieldmangler></$list>
+</div>
+
+!!! {{$:/core/images/edit-button}} {{$:/MetaTabs/Language!!addnote}}
+<div class="addnewform">
+<$edit-text tiddler="$:/temp/note" field="inputTitle" tag="input" placeholder={{$:/MetaTabs/Language!!notetitle}}/>
+<$edit-text tiddler="$:/temp/note" default="" placeholder={{$:/MetaTabs/Language!!note}} class="tw-edit-texteditor" tag="textarea"/><br><$tiddler tiddler="$:/temp/note">{{||$:/core/ui/EditTemplate/tags}}</$tiddler>
+</div>
+<<neuenotiz>>
+<$button>
+<$action-deletetiddler $filter="[search:title[$:/temp/note]]"/>
+{{$:/MetaTabs/Language!!clear}}
+</$button>

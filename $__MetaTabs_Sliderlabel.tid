@@ -1,0 +1,9 @@
+created: 20160816085719344
+creator: JR
+modified: 20181012002551710
+modifier: JR
+tags: template Test Inventar MetaTabs
+title: $:/MetaTabs/Sliderlabel
+type: text/vnd.tiddlywiki
+
+<$view field="title"/>
