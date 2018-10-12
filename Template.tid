@@ -2,7 +2,7 @@ created: 20160803083646023
 creator: JR
 modified: 20181012002551739
 modifier: JR
-tags: Inventar $:/tags/ViewTemplate MetaTabs
+tags: Inventory $:/tags/ViewTemplate MetaTabs
 title: $:/plugins/MetaTabs/Template
 type: text/vnd.tiddlywiki
 
@@ -61,7 +61,7 @@ position: relative; padding-bottom:-20px
 <$list filter="[all[current]has[slideshow]][all[current]has[story]]"><$button><$action-setfield $tiddler=<<stater>> text="story"/> {{$:/core/images/slideshow}}</$button></$list>
 <$list filter="[all[current]tag[sortieren]]"><$button><$action-setfield $tiddler=<<stater>> text="sortieren"/> {{$:/core/images/list-bullet}}</$button></$list>
 <$list filter="[search:origin<currentTiddler>tag[task]limit[1]]"><$button><$action-setfield $tiddler=<<stater>> text="task"/>@@font-size:15px;font-style: italic;font-weight: bold;!@@</$button></$list>
-<$list filter="[all[current]!tag[Inventar]!is[system]]">
+<$list filter="[all[current]!tag[Inventory]!is[system]]">
 <$button><$action-setfield $tiddler=<<stater>> text="add"/> {{$:/core/images/new-button}}</$button></$list>
 <$list filter=<<staterfil>>><$button class="invisible"><$action-deletetiddler $filter=<<staterfil>>/> {{$:/core/images/close-button}}</$button>
 </$list>
