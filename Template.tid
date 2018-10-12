@@ -28,7 +28,7 @@ type: text/vnd.tiddlywiki
 \define idea()
 <$list filter="[search:origin<currentTiddler>tag[Idea]]"><$macrocall $name="slider" label={{!!title}}/></$list>
 \end
-\define notizen()
+\define notes()
 <$list filter="[search:origin<currentTiddler>tag[Note]sort[position]]"><$macrocall $name="slider" label={{!!title}}/></$list>
 \end
 \define additem()
@@ -76,7 +76,7 @@ position: relative; padding-bottom:-20px
 <<idea>>
 </$reveal>
 <$reveal state=<<stater>> type="match" text="notiz" default="hide">
-<<notizen>>
+<<notes>>
 </$reveal>
 <$reveal state=<<stater>> type="match" text="add" default="hide">
 <<additem>>
