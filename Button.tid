@@ -1,4 +1,4 @@
-caption: {{$:/core/images/concept}} MetaTabs
+caption: {{$:/plugins/MetaTabs/images/concept}} MetaTabs
 created: 20161129204315062
 creator: JR
 modified: 20181012002551728
@@ -11,13 +11,13 @@ type: text/vnd.tiddlywiki
 <$button style="border-width:0px;background: rgba(255, 255, 255, 0)" ><$fieldmangler tiddler="$:/plugins/MetaTabs/Template">
 <$action-sendmessage $message='tm-remove-tag' $param="$:/tags/ViewTemplate"/></$fieldmangler>    
 <$action-setfield $tiddler="$:/config/Visibility/MetaTabs" text="hide"/>
-{{$:/core/images/concept}}
+{{$:/plugins/MetaTabs/images/concept}}
 </$button>
 </$reveal>
 <$reveal state="$:/config/Visibility/MetaTabs" type="nomatch" text="show">
 <$button style="border-width:0px;background: rgba(255, 255, 255, 0)" tooltip="Verknüpfungen anzeigen"><$fieldmangler tiddler="$:/plugins/MetaTabs/Template">
 <$action-sendmessage $message='tm-add-tag' $param="$:/tags/ViewTemplate"/></$fieldmangler>
 <$action-setfield $tiddler="$:/config/Visibility/MetaTabs" text="show"/>
-{{$:/core/images/concept}}
+{{$:/plugins/MetaTabs/images/concept}}
 </$button>
 </$reveal>

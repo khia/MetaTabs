@@ -2,7 +2,7 @@ created: 20161230221558929
 creator: JR
 modified: 20181012002551701
 modifier: JR
-story: [[$:/plugins/MetaTabs/About]] [[$:/plugins/MetaTabs/Adaptation]] $:/plugins/MetaTabs/Template $:/plugins/MetaTabs/Language $:/plugins/MetaTabs/Button $:/plugins/MetaTabs/newIdea $:/plugins/MetaTabs/newNote $:/plugins/MetaTabs/SliderLabel $:/core/images/notes $:/core/images/idea $:/core/images/open $:/core/images/concept
+story: [[$:/plugins/MetaTabs/About]] [[$:/plugins/MetaTabs/Adaptation]] $:/plugins/MetaTabs/Template $:/plugins/MetaTabs/Language $:/plugins/MetaTabs/Button $:/plugins/MetaTabs/newIdea $:/plugins/MetaTabs/newNote $:/plugins/MetaTabs/SliderLabel $:/core/images/notes $:/core/images/idea $:/core/images/open $:/plugins/MetaTabs/images/concept
 tags: MetaTabs
 title: $:/plugins/MetaTabs/About
 type: text/vnd.tiddlywiki
