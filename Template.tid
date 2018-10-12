@@ -55,7 +55,7 @@ position: relative; padding-bottom:-20px
 </style>
 <div class="metainfo">
 <$set name=tabstatid value=<<currentTiddler>>>
-<$list filter="[search:origin<currentTiddler>tag[Note]limit[1]]"><$button><$action-setfield $tiddler=<<stater>> text="notiz"/> {{$:/plugins/MetaTabs/images/notes}}</$button></$list>
+<$list filter="[search:origin<currentTiddler>tag[Note]limit[1]]"><$button><$action-setfield $tiddler=<<stater>> text="note"/> {{$:/plugins/MetaTabs/images/notes}}</$button></$list>
 <$list filter="[search:origin<currentTiddler>tag[Idea]limit[1]]"><$button><$action-setfield $tiddler=<<stater>> text="idea"/> {{$:/plugins/MetaTabs/images/idea}}</$button></$list>
 <$list filter="[all[current]search[<ref ]]"><$button><$action-setfield $tiddler=<<stater>> text="references"/> {{$:/core/images/asterisk}}</$button></$list>
 <$list filter="[all[current]has[slideshow]][all[current]has[story]]"><$button><$action-setfield $tiddler=<<stater>> text="story"/> {{$:/core/images/slideshow}}</$button></$list>
@@ -75,7 +75,7 @@ position: relative; padding-bottom:-20px
 <$reveal state=<<stater>> type="match" text="idea" default="hide">
 <<idea>>
 </$reveal>
-<$reveal state=<<stater>> type="match" text="notiz" default="hide">
+<$reveal state=<<stater>> type="match" text="note" default="hide">
 <<notes>>
 </$reveal>
 <$reveal state=<<stater>> type="match" text="add" default="hide">
