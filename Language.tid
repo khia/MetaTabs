@@ -46,7 +46,7 @@ Because I started this for my private purposes there is quite a lot to change an
 For doing further changes the explanation "[[$:/plugins/MetaTabs/Adaptation]]" may be helpfull.
 
 !Tags
-The tags "Notiz","Idee", etc. are in German and cannot be transcluded and replaced from this ~TranslationTiddler because they are used in Listfilters. If you want to change these tags, you have to change the each one manually in three places:
+The tags "Note","Idee", etc. are in German and cannot be transcluded and replaced from this ~TranslationTiddler because they are used in Listfilters. If you want to change these tags, you have to change the each one manually in three places:
 
 # in the Listfilter of the METATABS BUTTONS in the [[Template|$:/plugins/MetaTabs/Template]] 
 # in the Listfilters of macros at the beginning of the [[Template|$:/plugins/MetaTabs/Template]]
