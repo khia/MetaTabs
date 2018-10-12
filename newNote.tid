@@ -15,7 +15,7 @@ type: text/vnd.tiddlywiki
 <$edit-text placeholder="Text der Note" class="tw-edit-texteditor" tag="textarea"/>
 </$reveal>
 \end
-\define titelsetzen() [[$(titel)$]]
+\define settitle() [[$(titel)$]]
 \define setdate() Note $(temptags)$
 \define timeStampTitle() $(inputTitle)$ $(timeStamp)$-$(titel)$
 \define appearedit()
@@ -29,7 +29,7 @@ type: text/vnd.tiddlywiki
   text={{$:/temp/note!!text}}
   thema={{!!thema}} seminar={{!!seminar}}  
   title=<<timeStampTitle>>
-  origin=<<titelsetzen>>
+  origin=<<settitle>>
   tags=<<setdate>>/>
 <$action-deletetiddler $filter="[search:title[ $:/temp/note]]"/>{{$:/plugins/MetaTabs/Language!!addnote}}</$button>
 </$vars>
