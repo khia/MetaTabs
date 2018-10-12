@@ -8,7 +8,7 @@ title: $:/plugins/MetaTabs/newIdea
 type: text/vnd.tiddlywiki
 
 \define titelsetzen() [[$(titel)$]]
-\define tagssetzen() Idea $(temptags)$
+\define setdate() Idea $(temptags)$
 \define newtit() Idea-$(preptit)$-<<now DD.MMMYY>>
 <style>
 .addnewform textarea,
@@ -32,7 +32,7 @@ text-align:left;
 <$set name="temptags" value={{$:/temp/idea!!tags}}> 
 <$set name="titel" value={{!!title}}>
 <$button>
-<$action-sendmessage $message="tm-new-tiddler" title={{$:/temp/idea!!provisory_title}} tags=<<tagssetzen>> thema={{!!thema}} seminar={{!!seminar}} text={{$:/temp/idea!!text}} origin=<<titelsetzen>>/>
+<$action-sendmessage $message="tm-new-tiddler" title={{$:/temp/idea!!provisory_title}} tags=<<setdate>> thema={{!!thema}} seminar={{!!seminar}} text={{$:/temp/idea!!text}} origin=<<titelsetzen>>/>
 <$action-deletetiddler $filter="[search:title[ $:/temp/idea]]"/>
 {{$:/core/images/new-button}}{{$:/plugins/MetaTabs/Language!!saveidea}}
 </$button></$set></$set><$button>
