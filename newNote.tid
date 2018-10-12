@@ -10,7 +10,7 @@ type: text/vnd.tiddlywiki
 \define editslider(label)
 <$reveal type="match" text="" default="" state="$:/state/$label$" animate="yes"><$radio  tiddler="$:/state/$label$" value="show">{{$label$||$:/plugins/MetaTabs/SliderLabel}}</$radio><hr>
 </$reveal>
-<$reveal type="nomatch" text="" default="" state="$:/state/$label$" animate="yes"><$radio  tiddler="$:/state/$label$" value="" style="font-size:1.2em;background-color:transparent">{{$label$||$:/plugins/MetaTabs/SliderLabel}}</$radio><$link>@@height:1em;{{$:/core/images/open}}@@</$link>
+<$reveal type="nomatch" text="" default="" state="$:/state/$label$" animate="yes"><$radio  tiddler="$:/state/$label$" value="" style="font-size:1.2em;background-color:transparent">{{$label$||$:/plugins/MetaTabs/SliderLabel}}</$radio><$link>@@height:1em;{{$:/plugins/MetaTabs/images/open}}@@</$link>
 <br>
 <$edit-text placeholder="Text der Notiz" class="tw-edit-texteditor" tag="textarea"/>
 </$reveal>

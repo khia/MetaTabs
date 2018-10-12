@@ -8,7 +8,7 @@ type: text/vnd.tiddlywiki
 
 \define slider(label)
 <hr><$button popup="$:/state/$label$" style="font-size:1.2em;float:left;background-color:transparent"><$reveal type="match" text="" default="" state="$:/state/$label$">&#x229E;</$reveal><$reveal type="nomatch" text="" default="" state="$:/state/$label$">&#x229F;</$reveal> {{$label$||$:/plugins/MetaTabs/SliderLabel}}</$button>
-<$reveal type="nomatch" text="" default="" state="$:/state/$label$" animate="yes"> <$link>@@height:1em;{{$:/core/images/open}}@@</$link>
+<$reveal type="nomatch" text="" default="" state="$:/state/$label$" animate="yes"> <$link>@@height:1em;{{$:/plugins/MetaTabs/images/open}}@@</$link>
 <br>
 <$transclude mode="block"/>
 </$reveal><br>
