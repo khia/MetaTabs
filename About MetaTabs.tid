@@ -2,7 +2,7 @@ created: 20161230221558929
 creator: JR
 modified: 20181012002551701
 modifier: JR
-story: [[About MetaTabs]] [[How to adapt Metatabs to your personal needs]] $:/plugins/MetaTabs/Template $:/plugins/MetaTabs/Language $:/plugins/MetaTabs/Button $:/plugins/MetaTabs/newIdea $:/plugins/MetaTabs/newNote $:/plugins/MetaTabs/SliderLabel $:/core/images/notes $:/core/images/idea $:/core/images/open $:/core/images/concept
+story: [[About MetaTabs]] [[$:/plugins/MetaTabs/Adaptation]] $:/plugins/MetaTabs/Template $:/plugins/MetaTabs/Language $:/plugins/MetaTabs/Button $:/plugins/MetaTabs/newIdea $:/plugins/MetaTabs/newNote $:/plugins/MetaTabs/SliderLabel $:/core/images/notes $:/core/images/idea $:/core/images/open $:/core/images/concept
 tags: MetaTabs
 title: About MetaTabs
 type: text/vnd.tiddlywiki
@@ -31,7 +31,7 @@ Because I was not able to pack this as a plugin yet; I packed all related tiddle
 https://www.dropbox.com/s/7xh81nxrpunfzpn/MetaTabs.json?dl=1 
 
 !Implementations 
-You can Modify ~MetaTabs yourself. For this I made an [[explanation|How to adapt Metatabs to your personal needs]] which helps you to start building your own version with your personal categories. Because it consists of only a few Tiddlers, it is possible to adapt Metatabs to personal needs.<br>
+You can Modify ~MetaTabs yourself. For this I made an [[explanation|$:/plugins/MetaTabs/Adaptation]] which helps you to start building your own version with your personal categories. Because it consists of only a few Tiddlers, it is possible to adapt Metatabs to personal needs.<br>
 Birthe has made a Danish version of ~MetaTabs @ http://faneklip.tiddlyspot.com mixing it with tiddlyclip. Thanks for the enhancements I reimported!
 
 !Updating from old Versions
