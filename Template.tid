@@ -19,7 +19,7 @@ type: text/vnd.tiddlywiki
 <hr>
 <<taglistsubstract>>
 <<tagdropper>>
-<$list filter="[list[!!import]limit[1]]-[list[!!list]]">ursprünglich importierte Titel<br/></$list>
+<$list filter="[list[!!import]limit[1]]-[list[!!list]]">original imported title<br/></$list>
 <$list filter="[list[!!import]]-[list[!!list]]"><$link><$view field="title"/></$link><br/></$list>
 \end
 \define showitems()
