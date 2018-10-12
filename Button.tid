@@ -15,7 +15,7 @@ type: text/vnd.tiddlywiki
 </$button>
 </$reveal>
 <$reveal state="$:/config/Visibility/MetaTabs" type="nomatch" text="show">
-<$button style="border-width:0px;background: rgba(255, 255, 255, 0)" tooltip="Verknüpfungen anzeigen"><$fieldmangler tiddler="$:/plugins/MetaTabs/Template">
+<$button style="border-width:0px;background: rgba(255, 255, 255, 0)" tooltip="view links"><$fieldmangler tiddler="$:/plugins/MetaTabs/Template">
 <$action-sendmessage $message='tm-add-tag' $param="$:/tags/ViewTemplate"/></$fieldmangler>
 <$action-setfield $tiddler="$:/config/Visibility/MetaTabs" text="show"/>
 {{$:/plugins/MetaTabs/images/concept}}
