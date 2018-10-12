@@ -31,7 +31,7 @@ You can look at [[$:/plugins/MetaTabs/newIdea]] to see how this works
 
 !!To adapt the language
 There is a [[TranslationTiddler|$:/plugins/MetaTabs/Language]] to adapt the captions of the templates to your language.
-The tags "Note","Idee", etc. are in German, and because they are used in Listfilters I cannot transclude these from the [[TranslationTiddler|$:/plugins/MetaTabs/Language]]. If you want to change this, you have to change the word manually in three places:
+The tags "Note","Idea", etc. are in German, and because they are used in Listfilters I cannot transclude these from the [[TranslationTiddler|$:/plugins/MetaTabs/Language]]. If you want to change this, you have to change the word manually in three places:
 
 # in the Listfilter of the METATABS BUTTONS 
 # in the Listfilters of macros at the beginning of the [[Template|$:/plugins/MetaTabs/Template]]

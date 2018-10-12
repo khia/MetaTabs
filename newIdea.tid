@@ -8,8 +8,8 @@ title: $:/plugins/MetaTabs/newIdea
 type: text/vnd.tiddlywiki
 
 \define titelsetzen() [[$(titel)$]]
-\define tagssetzen() Idee $(temptags)$
-\define newtit() Idee-$(preptit)$-<<now DD.MMMYY>>
+\define tagssetzen() Idea $(temptags)$
+\define newtit() Idea-$(preptit)$-<<now DD.MMMYY>>
 <style>
 .addnewform textarea,
 .addnewform input{
