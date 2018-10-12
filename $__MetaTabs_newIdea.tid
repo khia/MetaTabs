@@ -1,4 +1,4 @@
-caption: {{$:/core/images/idea}}{{$:/MetaTabs/Language!!idea}}
+caption: {{$:/core/images/idea}}{{$:/plugins/MetaTabs/Language!!idea}}
 created: 20160817093209918
 creator: Alberto Molina Pérez
 modified: 20181012002551723
@@ -19,23 +19,23 @@ text-align:left;
 }
 </style>
 <div class="addnewform">
-<$edit-text tiddler="$:/temp/idea" field="provisory_title" placeholder={{$:/MetaTabs/Language!!newtitle}} tag="input" class="tw-edit-texteditor"/><br>
+<$edit-text tiddler="$:/temp/idea" field="provisory_title" placeholder={{$:/plugins/MetaTabs/Language!!newtitle}} tag="input" class="tw-edit-texteditor"/><br>
 <$set name="preptit" setTo={{$:/temp/idea!!provisory_title}}>
 <$list filter="[field:title{$:/temp/idea!!provisory_title}]">
-@@color:red;{{$:/MetaTabs/Language!!exists}}@@
+@@color:red;{{$:/plugins/MetaTabs/Language!!exists}}@@
 @@color:blue;<$link><$view field="title"/></$link>@@ 
 </$list>
 </$set>
 <$tiddler tiddler="$:/temp/idea">{{||$:/core/ui/EditTemplate/tags}}</$tiddler>
-<$edit-text tiddler="$:/temp/idea" default="" placeholder={{$:/MetaTabs/Language!!ideatext}} class="tw-edit-texteditor" tag="textarea"/><br>
+<$edit-text tiddler="$:/temp/idea" default="" placeholder={{$:/plugins/MetaTabs/Language!!ideatext}} class="tw-edit-texteditor" tag="textarea"/><br>
 </div>
 <$set name="temptags" value={{$:/temp/idea!!tags}}> 
 <$set name="titel" value={{!!title}}>
 <$button>
 <$action-sendmessage $message="tm-new-tiddler" title={{$:/temp/idea!!provisory_title}} tags=<<tagssetzen>> thema={{!!thema}} seminar={{!!seminar}} text={{$:/temp/idea!!text}} origin=<<titelsetzen>>/>
 <$action-deletetiddler $filter="[search:title[ $:/temp/idea]]"/>
-{{$:/core/images/new-button}}{{$:/MetaTabs/Language!!saveidea}}
+{{$:/core/images/new-button}}{{$:/plugins/MetaTabs/Language!!saveidea}}
 </$button></$set></$set><$button>
 <$action-deletetiddler $filter="[search:title[$:/temp/idea]]"/>
-{{$:/MetaTabs/Language!!clear}}
+{{$:/plugins/MetaTabs/Language!!clear}}
 </$button>

@@ -2,7 +2,7 @@ created: 20161230221558929
 creator: JR
 modified: 20181012002551701
 modifier: JR
-story: [[About MetaTabs]] [[How to adapt Metatabs to your personal needs]] $:/MetaTabs/Template $:/MetaTabs/Language $:/plugins/MetaTabs/Button $:/MetaTabs/newIdea $:/MetaTabs/newNote $:/MetaTabs/Sliderlabel $:/core/images/notes $:/core/images/idea $:/core/images/open $:/core/images/concept
+story: [[About MetaTabs]] [[How to adapt Metatabs to your personal needs]] $:/MetaTabs/Template $:/plugins/MetaTabs/Language $:/plugins/MetaTabs/Button $:/MetaTabs/newIdea $:/MetaTabs/newNote $:/MetaTabs/Sliderlabel $:/core/images/notes $:/core/images/idea $:/core/images/open $:/core/images/concept
 tags: MetaTabs
 title: About MetaTabs
 type: text/vnd.tiddlywiki
@@ -38,8 +38,8 @@ Birthe has made a Danish version of ~MetaTabs @ http://faneklip.tiddlyspot.com m
 Old versions of ~MetaTabs used a field named "source" to create the relations, instead of "origin" like the new versions do. [[Here|Fieldchanger]] is a tool to fix this if you upgrade. 
 
 !Translations
-To have ~MetaTabs in your language change the fields in the [[TranslationTiddler|$:/MetaTabs/Language]].<br>
+To have ~MetaTabs in your language change the fields in the [[TranslationTiddler|$:/plugins/MetaTabs/Language]].<br>
 There are a few ready-to-install translations of MetaTabs:
-<$list filter="[prefix[$:/MetaTabs/Language]]-[[$:/MetaTabs/Language]]"><br>{{!!title}} created by {{!!modifier}}</$list><br>
-Just drag the translation you want to your TW and rename it $:/MetaTabs/Language .<br>
-If you translate $:/MetaTabs/Language please send it to me, I will import it into this wiki and list it.
+<$list filter="[prefix[$:/plugins/MetaTabs/Language]]-[[$:/plugins/MetaTabs/Language]]"><br>{{!!title}} created by {{!!modifier}}</$list><br>
+Just drag the translation you want to your TW and rename it $:/plugins/MetaTabs/Language .<br>
+If you translate $:/plugins/MetaTabs/Language please send it to me, I will import it into this wiki and list it.

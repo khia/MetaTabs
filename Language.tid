@@ -36,7 +36,7 @@ tags: Inventar MetaTabs
 tasks: Tasks
 tasktext: Information on the task
 titel: Title
-title: $:/MetaTabs/Language
+title: $:/plugins/MetaTabs/Language
 type: text/vnd.tiddlywiki
 year: Year
 

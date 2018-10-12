@@ -1,4 +1,4 @@
-caption: {{$:/core/images/notes}}{{$:/MetaTabs/Language!!note}}
+caption: {{$:/core/images/notes}}{{$:/plugins/MetaTabs/Language!!note}}
 created: 20160713082608994
 creator: JR
 modified: 20181012002551715
@@ -31,7 +31,7 @@ type: text/vnd.tiddlywiki
   title=<<timeStampTitle>>
   origin=<<titelsetzen>>
   tags=<<tagssetzen>>/>
-<$action-deletetiddler $filter="[search:title[ $:/temp/note]]"/>{{$:/MetaTabs/Language!!addnote}}</$button>
+<$action-deletetiddler $filter="[search:title[ $:/temp/note]]"/>{{$:/plugins/MetaTabs/Language!!addnote}}</$button>
 </$vars>
 \end
 <style>
@@ -61,13 +61,13 @@ height: 1.2em
 <$list filter="[search:origin<currentTiddler>tag[Notiz]sort[position]]"><$fieldmangler><$edit-text class="small-editor" tag="input" field="position"/><$macrocall $name="editslider" label={{!!title}}/></$fieldmangler></$list>
 </div>
 
-!!! {{$:/core/images/edit-button}} {{$:/MetaTabs/Language!!addnote}}
+!!! {{$:/core/images/edit-button}} {{$:/plugins/MetaTabs/Language!!addnote}}
 <div class="addnewform">
-<$edit-text tiddler="$:/temp/note" field="inputTitle" tag="input" placeholder={{$:/MetaTabs/Language!!notetitle}}/>
-<$edit-text tiddler="$:/temp/note" default="" placeholder={{$:/MetaTabs/Language!!note}} class="tw-edit-texteditor" tag="textarea"/><br><$tiddler tiddler="$:/temp/note">{{||$:/core/ui/EditTemplate/tags}}</$tiddler>
+<$edit-text tiddler="$:/temp/note" field="inputTitle" tag="input" placeholder={{$:/plugins/MetaTabs/Language!!notetitle}}/>
+<$edit-text tiddler="$:/temp/note" default="" placeholder={{$:/plugins/MetaTabs/Language!!note}} class="tw-edit-texteditor" tag="textarea"/><br><$tiddler tiddler="$:/temp/note">{{||$:/core/ui/EditTemplate/tags}}</$tiddler>
 </div>
 <<neuenotiz>>
 <$button>
 <$action-deletetiddler $filter="[search:title[$:/temp/note]]"/>
-{{$:/MetaTabs/Language!!clear}}
+{{$:/plugins/MetaTabs/Language!!clear}}
 </$button>
