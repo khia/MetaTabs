@@ -56,7 +56,7 @@ position: relative; padding-bottom:-20px
 <div class="metainfo">
 <$set name=tabstatid value=<<currentTiddler>>>
 <$list filter="[search:origin<currentTiddler>tag[Notiz]limit[1]]"><$button><$action-setfield $tiddler=<<stater>> text="notiz"/> {{$:/core/images/notes}}</$button></$list>
-<$list filter="[search:origin<currentTiddler>tag[Idee]limit[1]]"><$button><$action-setfield $tiddler=<<stater>> text="idee"/> {{$:/core/images/idea}}</$button></$list>
+<$list filter="[search:origin<currentTiddler>tag[Idee]limit[1]]"><$button><$action-setfield $tiddler=<<stater>> text="idee"/> {{$:/plugins/MetaTabs/images/idea}}</$button></$list>
 <$list filter="[all[current]search[<ref ]]"><$button><$action-setfield $tiddler=<<stater>> text="references"/> {{$:/core/images/asterisk}}</$button></$list>
 <$list filter="[all[current]has[slideshow]][all[current]has[story]]"><$button><$action-setfield $tiddler=<<stater>> text="story"/> {{$:/core/images/slideshow}}</$button></$list>
 <$list filter="[all[current]tag[sortieren]]"><$button><$action-setfield $tiddler=<<stater>> text="sortieren"/> {{$:/core/images/list-bullet}}</$button></$list>
