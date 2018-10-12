@@ -2,9 +2,9 @@ created: 20161230221558929
 creator: JR
 modified: 20181012002551701
 modifier: JR
-story: [[About MetaTabs]] [[$:/plugins/MetaTabs/Adaptation]] $:/plugins/MetaTabs/Template $:/plugins/MetaTabs/Language $:/plugins/MetaTabs/Button $:/plugins/MetaTabs/newIdea $:/plugins/MetaTabs/newNote $:/plugins/MetaTabs/SliderLabel $:/core/images/notes $:/core/images/idea $:/core/images/open $:/core/images/concept
+story: [[$:/plugins/MetaTabs/About]] [[$:/plugins/MetaTabs/Adaptation]] $:/plugins/MetaTabs/Template $:/plugins/MetaTabs/Language $:/plugins/MetaTabs/Button $:/plugins/MetaTabs/newIdea $:/plugins/MetaTabs/newNote $:/plugins/MetaTabs/SliderLabel $:/core/images/notes $:/core/images/idea $:/core/images/open $:/core/images/concept
 tags: MetaTabs
-title: About MetaTabs
+title: $:/plugins/MetaTabs/About
 type: text/vnd.tiddlywiki
 
 MetaTabs is inspired by MagicTabs and Tiddlyscholar by Alberto Molina Pérez, which is a very elaborated tool for researchers which shows a row of useful Metalinks at the bottom of each Tiddler.<br>
