@@ -15,7 +15,7 @@ type: text/vnd.tiddlywiki
 \end
 \define staterfil() [title[$:/temp/stater/$(tabstatid)$]has[created]]
 \define stater() $:/temp/stater/$(tabstatid)$
-\define sortieren()
+\define sort()
 <hr>
 <<taglistsubstract>>
 <<tagdropper>>
@@ -59,7 +59,7 @@ position: relative; padding-bottom:-20px
 <$list filter="[search:origin<currentTiddler>tag[Idea]limit[1]]"><$button><$action-setfield $tiddler=<<stater>> text="idea"/> {{$:/plugins/MetaTabs/images/idea}}</$button></$list>
 <$list filter="[all[current]search[<ref ]]"><$button><$action-setfield $tiddler=<<stater>> text="references"/> {{$:/core/images/asterisk}}</$button></$list>
 <$list filter="[all[current]has[slideshow]][all[current]has[story]]"><$button><$action-setfield $tiddler=<<stater>> text="story"/> {{$:/core/images/slideshow}}</$button></$list>
-<$list filter="[all[current]tag[sortieren]]"><$button><$action-setfield $tiddler=<<stater>> text="sortieren"/> {{$:/core/images/list-bullet}}</$button></$list>
+<$list filter="[all[current]tag[sort]]"><$button><$action-setfield $tiddler=<<stater>> text="sort"/> {{$:/core/images/list-bullet}}</$button></$list>
 <$list filter="[search:origin<currentTiddler>tag[task]limit[1]]"><$button><$action-setfield $tiddler=<<stater>> text="task"/>@@font-size:15px;font-style: italic;font-weight: bold;!@@</$button></$list>
 <$list filter="[all[current]!tag[Inventory]!is[system]]">
 <$button><$action-setfield $tiddler=<<stater>> text="add"/> {{$:/core/images/new-button}}</$button></$list>
@@ -84,6 +84,6 @@ position: relative; padding-bottom:-20px
 <$reveal state=<<stater>> type="match" text="task" default="hide">
 <<showtasks>>
 </$reveal>
-<$reveal state=<<stater>> type="match" text="sortieren" default="hide">
-<<sortieren>>
+<$reveal state=<<stater>> type="match" text="sort" default="hide">
+<<sort>>
 </$reveal>
