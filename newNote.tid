@@ -21,7 +21,7 @@ type: text/vnd.tiddlywiki
 \define appearedit()
 <$appear show={{$:/core/images/edit-button}}><$edit-text placeholder="Text der Note" class="tw-edit-texteditor" tag="textarea"/></$appear>
 \end
-\define neuenotiz()
+\define newnote()
 <$vars timeStamp=<<now DD.MMMYY>> inputTitle={{$:/temp/note!!inputTitle}} temptags={{$:/temp/note!!tags}} titel={{!!title}}>
 <$button>
 <$action-sendmessage
@@ -66,7 +66,7 @@ height: 1.2em
 <$edit-text tiddler="$:/temp/note" field="inputTitle" tag="input" placeholder={{$:/plugins/MetaTabs/Language!!notetitle}}/>
 <$edit-text tiddler="$:/temp/note" default="" placeholder={{$:/plugins/MetaTabs/Language!!note}} class="tw-edit-texteditor" tag="textarea"/><br><$tiddler tiddler="$:/temp/note">{{||$:/core/ui/EditTemplate/tags}}</$tiddler>
 </div>
-<<neuenotiz>>
+<<newnote>>
 <$button>
 <$action-deletetiddler $filter="[search:title[$:/temp/note]]"/>
 {{$:/plugins/MetaTabs/Language!!clear}}
