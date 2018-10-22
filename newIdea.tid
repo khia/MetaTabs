@@ -8,7 +8,7 @@ title: $:/plugins/jr/MetaTabs/newIdea
 type: text/vnd.tiddlywiki
 
 \define settitle() [[$(title)$]]
-\define setdate() Idea $(temptags)$
+\define settags() Idea $(temptags)$
 \define newtit() Idea-$(preptit)$-<<now DD.MMMYY>>
 <style>
   .addnewform textarea,
@@ -46,7 +46,7 @@ type: text/vnd.tiddlywiki
       <$action-sendmessage
         $message="tm-new-tiddler"
         title={{$:/temp/idea!!provisory_title}}
-        tags=<<setdate>>
+        tags=<<settags>>
         thema={{!!thema}}
         seminar={{!!seminar}}
         text={{$:/temp/idea!!text}}

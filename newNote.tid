@@ -26,7 +26,7 @@ type: text/vnd.tiddlywiki
   </$reveal>
 \end
 \define settitle() [[$(title)$]]
-\define setdate() Note $(temptags)$
+\define settags() Note $(temptags)$
 \define timeStampTitle() $(inputTitle)$ $(timeStamp)$-$(title)$
 \define appearedit()
   <$appear show={{$:/core/images/edit-button}}>
@@ -42,7 +42,7 @@ type: text/vnd.tiddlywiki
         thema={{!!thema}} seminar={{!!seminar}}
         title=<<timeStampTitle>>
         origin=<<settitle>>
-        tags=<<setdate>>/>
+        tags=<<settags>>/>
       <$action-deletetiddler $filter="[search:title[ $:/temp/note]]"/>
       {{$:/plugins/jr/MetaTabs/Language!!addnote}}
     </$button>
