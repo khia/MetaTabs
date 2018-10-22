@@ -22,7 +22,7 @@ type: text/vnd.tiddlywiki
       @@height:1em;{{$:/plugins/jr/MetaTabs/images/open}}@@
     </$link>
     <br>
-    <$edit-text placeholder="Text der Note" class="tw-edit-texteditor" tag="textarea"/>
+    <$edit-text placeholder="Text for Note" class="tw-edit-texteditor" tag="textarea"/>
   </$reveal>
 \end
 \define settitle() [[$(title)$]]
@@ -30,7 +30,7 @@ type: text/vnd.tiddlywiki
 \define timeStampTitle() $(inputTitle)$ $(timeStamp)$-$(title)$
 \define appearedit()
   <$appear show={{$:/core/images/edit-button}}>
-    <$edit-text placeholder="Text der Note" class="tw-edit-texteditor" tag="textarea"/>
+    <$edit-text placeholder="Text for Note" class="tw-edit-texteditor" tag="textarea"/>
   </$appear>
 \end
 \define newnote()
