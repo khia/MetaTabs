@@ -8,15 +8,19 @@ title: $:/plugins/jr/MetaTabs/Button
 type: text/vnd.tiddlywiki
 
 <$reveal state="$:/config/MetaTabs/visibility" type="match" text="show" default="hide">
-  <$button style="border-width:0px;background: rgba(255, 255, 255, 0)" ><$fieldmangler tiddler="$:/plugins/jr/MetaTabs/Template">
-    <$action-sendmessage $message='tm-remove-tag' $param="$:/tags/ViewTemplate"/></$fieldmangler>
+  <$button style="border-width:0px;background: rgba(255, 255, 255, 0)" >
+    <$fieldmangler tiddler="$:/plugins/jr/MetaTabs/Template">
+      <$action-sendmessage $message='tm-remove-tag' $param="$:/tags/ViewTemplate"/>
+    </$fieldmangler>
     <$action-setfield $tiddler="$:/config/MetaTabs/visibility" text="hide"/>
     {{$:/plugins/jr/MetaTabs/images/concept}}
   </$button>
 </$reveal>
 <$reveal state="$:/config/MetaTabs/visibility" type="nomatch" text="show">
-  <$button style="border-width:0px;background: rgba(255, 255, 255, 0)" tooltip="view links"><$fieldmangler tiddler="$:/plugins/jr/MetaTabs/Template">
-    <$action-sendmessage $message='tm-add-tag' $param="$:/tags/ViewTemplate"/></$fieldmangler>
+  <$button style="border-width:0px;background: rgba(255, 255, 255, 0)" tooltip="view links">
+    <$fieldmangler tiddler="$:/plugins/jr/MetaTabs/Template">
+      <$action-sendmessage $message='tm-add-tag' $param="$:/tags/ViewTemplate"/>
+    </$fieldmangler>
     <$action-setfield $tiddler="$:/config/MetaTabs/visibility" text="show"/>
     {{$:/plugins/jr/MetaTabs/images/concept}}
   </$button>
