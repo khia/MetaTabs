@@ -14,6 +14,9 @@ type: text/vnd.tiddlywiki
     </$fieldmangler>
     <$action-setfield $tiddler="$:/config/MetaTabs/visibility" text="hide"/>
     {{$:/plugins/jr/MetaTabs/images/concept}}
+    <$list filter="[<tv-config-toolbar-text>prefix[yes]]">
+       <span class="tc-btn-text"><$text text="hide MetaTabs"/></span>
+    </$list>
   </$button>
 </$reveal>
 <$reveal state="$:/config/MetaTabs/visibility" type="nomatch" text="show">
@@ -23,5 +26,8 @@ type: text/vnd.tiddlywiki
     </$fieldmangler>
     <$action-setfield $tiddler="$:/config/MetaTabs/visibility" text="show"/>
     {{$:/plugins/jr/MetaTabs/images/concept}}
+    <$list filter="[<tv-config-toolbar-text>prefix[yes]]">
+      <span class="tc-btn-text"><$text text="show MetaTabs"/></span>
+    </$list>
   </$button>
 </$reveal>
